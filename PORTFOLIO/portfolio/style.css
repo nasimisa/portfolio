@@ -1,0 +1,228 @@
+/* BASE STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 100%;
+  border-radius: 5px;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.bi, hr, i {
+  color: #630b52;
+}
+
+h1 {
+  background: #fb7900;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* NAV STYLES */
+
+.navbar {
+  background: #630b52;
+  padding: 0;
+  border-radius: 0;
+}
+
+#logo {
+  margin-left: -10px;
+  background: #fff;
+}
+
+.navbar-nav {
+  width: 550px;
+}
+
+.nav-item {
+  background: #fff;
+  border: 1px solid #fb7900;
+  margin-bottom: 1px;
+}
+
+.nav-item:hover {
+  background: #fb7900;
+}
+
+.nav-link {
+  color: #fb7900 !important;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+.navbar-dark .navbar-toggler {
+  color: #fb7900;
+}
+
+/* COVER styles */
+
+#cover {
+  height: 500px;
+  width: 100%;
+  margin-top: 120px;
+  background: url(cover.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cover-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#caption-img-div {
+  width: auto;
+}
+
+#caption-img {
+  width: 240px;
+}
+
+#caption-text {
+  background: #fff;
+  padding: 20px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+/* SKILLS styles */
+
+#skills {
+  margin: 80px auto;
+}
+
+#skills p {
+  font-size: 1.4rem;
+}
+
+/* CERTIFICATES styles */
+
+#certificates div {
+  margin-bottom: 40px;
+}
+
+#cert-text {
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+#certificates span {
+  color: #fb7900;
+}
+
+li {
+  list-style: none;
+}
+
+/* MY WORK styles */
+
+#mywork {
+  margin-bottom: 40px;
+}
+
+#projects {
+  display: flex;
+  flex-flow: column;
+  text-align: justify;
+  font-size: 1.2rem;
+  margin: 10px 5px;
+  border: 1px solid #fb7900;
+  padding: 10px;
+}
+
+@media (max-width:992px) {
+  #projects {
+    min-width: 100%;
+  }
+}
+
+#projects p {
+  margin: 20px auto;
+}
+
+#projects a {
+  text-decoration: none;
+  color: #fb7900;
+}
+
+#projects a:hover {
+  color: #fff;
+}
+
+#projects button {
+  width: 100px;
+  background: #fff;
+  border: 1px solid #fb7900;
+  align-self: center;
+}
+
+#projects button:hover {
+  background: #fb7900;
+}
+
+/* CONTACT styles */
+
+#contact {
+  font-size: 1.2rem;
+}
+
+#contact h1 {
+  margin-bottom: 10px;
+}
+
+/* FOOTER styles */
+
+footer {
+  background: #630b52;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  border-radius: 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.fa-arrow-circle-up {
+  color: #fff;
+}
+
+/* some media queries */
+
+@media (max-width: 817px) {
+  #cover {
+    height: 600px;
+    display: flex;
+    flex-flow: column;
+  }
+  #caption-text {
+    padding: 10px;
+    font-size: 16px;
+  }
+  #caption-img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-item {
+    width: 90vw;
+  }
+}
