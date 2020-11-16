@@ -1,5 +1,4 @@
-/* BASE STYLES */
-
+/*********** BASE STYLES **************/
 * {
   margin: 0;
   padding: 0;
@@ -14,11 +13,14 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-.bi, hr, i {
+hr,
+i {
   color: #630b52;
 }
 
@@ -28,21 +30,91 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* NAV STYLES */
-
-.navbar {
+/************* NAV STYLES *************/
+nav {
   background: #630b52;
   padding: 0;
   border-radius: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.nav-toggle {
+  transition: all 0.3s linear;
+  position: relative;
+  right: 15px;
+  width: 34px;
+  height: 20px;
+  background: transparent;
+  border: 0;
+}
+
+.nav-toggle:focus {
+  outline: 0 !important;
+}
+
+/* toggle button with 3 line bar (3 spans) which transforms to X on click */
+.nav-toggle span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #fb7900;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+}
+
+.nav-toggle span:nth-child(2).transform {
+  opacity: 0;
+  height: 3px;
+}
+
+.nav-toggle span:first-child {
+  top: 0;
+}
+
+.nav-toggle span:first-child.transform {
+  top: 50%;
+  transform: rotate(-135deg);
+  height: 3px;
+}
+
+.nav-toggle span:last-child {
+  top: 100%;
+}
+
+.nav-toggle span:last-child.transform {
+  top: 50%;
+  transform: rotate(135deg);
+  height: 3px;
 }
 
 #logo {
-  margin-left: -10px;
   background: #fff;
 }
 
-.navbar-nav {
-  width: 550px;
+.links {
+  width: auto;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  margin-bottom: 0;
+}
+
+.show-links {
+  height: auto;
 }
 
 .nav-item {
@@ -57,24 +129,21 @@ h1 {
 
 .nav-link {
   color: #fb7900 !important;
-  font-size: 20px;
+  font-size: 21px;
+  transition: all 0.3s linear;
 }
 
 .nav-link:hover {
   color: #fff !important;
+  transition: all 0.3s linear;
 }
 
-.navbar-dark .navbar-toggler {
-  color: #fb7900;
-}
-
-/* COVER styles */
-
+/************** COVER styles **************/
 #cover {
   height: 500px;
   width: 100%;
   margin-top: 120px;
-  background: url(cover.jpg) no-repeat center center;
+  background: url(./images/cover.jpg) no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -102,8 +171,7 @@ h1 {
   text-align: justify;
 }
 
-/* SKILLS styles */
-
+/************* SKILLS styles *************/
 #skills {
   margin: 80px auto;
 }
@@ -112,8 +180,7 @@ h1 {
   font-size: 1.4rem;
 }
 
-/* CERTIFICATES styles */
-
+/********** CERTIFICATES styles **********/
 #certificates div {
   margin-bottom: 40px;
 }
@@ -131,8 +198,7 @@ li {
   list-style: none;
 }
 
-/* MY WORK styles */
-
+/************ MY WORK styles ************/
 #mywork {
   margin-bottom: 40px;
 }
@@ -147,7 +213,7 @@ li {
   padding: 10px;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   #projects {
     min-width: 100%;
   }
@@ -177,8 +243,7 @@ li {
   background: #fb7900;
 }
 
-/* CONTACT styles */
-
+/*********** CONTACT styles ***********/
 #contact {
   font-size: 1.2rem;
 }
@@ -187,25 +252,24 @@ li {
   margin-bottom: 10px;
 }
 
-/* FOOTER styles */
-
+/*********** FOOTER styles ***********/
 footer {
   background: #630b52;
   color: #fff;
   display: flex;
   justify-content: space-between;
-  height: 30px;
+  height: 35px;
   border-radius: 0;
   position: fixed;
   bottom: 0;
+  padding: 3px;
 }
 
 .fa-arrow-circle-up {
   color: #fff;
 }
 
-/* some media queries */
-
+/********* MEDIA QUERIES *********/
 @media (max-width: 817px) {
   #cover {
     height: 600px;
@@ -224,5 +288,29 @@ footer {
 @media (max-width: 767px) {
   .nav-item {
     width: 90vw;
+  }
+}
+
+@media (min-width: 800px) {
+  .nav-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links {
+    height: auto;
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 5px;
+  }
+
+  .nav-link {
+    padding: 5px;
   }
 }
