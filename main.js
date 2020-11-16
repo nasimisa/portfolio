@@ -16,3 +16,27 @@ navToggle.addEventListener('click', toggleEvent);
 navLinks.forEach(link => {
   link.addEventListener('click', toggleEvent);
 });
+
+// adjust links for correct navigation
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    // to prevent default navigation
+    e.preventDefault();
+
+    // to choose link id-s
+    const id = e.currentTarget.getAttribute('href').slice(1); //use index 1 to skip # (index 0)
+    const element = document.getElementById(id);
+
+    // calculate height of nav
+    const navbar = document.querySelector('nav');
+    const navHeight = navbar.getBoundingClientRect().height;
+
+    //deduct navheight from link's position, in order to navigate to exact section
+    const position = element.offsetTop - navHeight;
+
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+  });
+});
