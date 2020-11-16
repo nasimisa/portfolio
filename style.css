@@ -111,6 +111,7 @@ nav {
   overflow: hidden;
   transition: all 0.3s linear;
   margin-bottom: 0;
+  padding-left: 5px;
 }
 
 .show-links {
@@ -173,7 +174,7 @@ nav {
 
 /************* SKILLS styles *************/
 #skills {
-  margin: 80px auto;
+  margin: 20px auto;
 }
 
 #skills p {
@@ -182,12 +183,20 @@ nav {
 
 /********** CERTIFICATES styles **********/
 #certificates div {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+#certificates {
+  margin-top: 50px;
 }
 
 #cert-text {
   text-align: justify;
   font-size: 1.4rem;
+}
+
+#cert-text ul {
+  text-align: left;
 }
 
 #certificates span {
@@ -200,7 +209,8 @@ li {
 
 /************ MY WORK styles ************/
 #mywork {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 #projects {
@@ -250,6 +260,7 @@ li {
 
 #contact h1 {
   margin-bottom: 10px;
+  margin-top: 50px;
 }
 
 /*********** FOOTER styles ***********/
@@ -288,6 +299,12 @@ footer {
 @media (max-width: 767px) {
   .nav-item {
     width: 90vw;
+  }
+
+  .links {
+    max-width: 750px;
+    margin: 0 auto;
+    padding-left: 20px;
   }
 }
 
