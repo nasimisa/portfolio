@@ -178,7 +178,7 @@ nav {
 }
 
 #skills p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /********** CERTIFICATES styles **********/
@@ -192,7 +192,7 @@ nav {
 
 #cert-text {
   text-align: justify;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 #cert-text ul {
@@ -329,5 +329,10 @@ footer {
 
   .nav-link {
     padding: 5px;
+  }
+  
+  #skills p,
+  #cert-text {
+    font-size: 1.4rem;
   }
 }
