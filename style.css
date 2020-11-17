@@ -78,7 +78,6 @@ nav {
 
 .nav-toggle span:nth-child(2).transform {
   opacity: 0;
-  height: 2.5px;
 }
 
 .nav-toggle span:first-child {
@@ -88,7 +87,6 @@ nav {
 .nav-toggle span:first-child.transform {
   top: 50%;
   transform: rotate(-135deg);
-  height: 2.5px;
 }
 
 .nav-toggle span:last-child {
@@ -98,7 +96,6 @@ nav {
 .nav-toggle span:last-child.transform {
   top: 50%;
   transform: rotate(135deg);
-  height: 2.5px;
 }
 
 #logo {
