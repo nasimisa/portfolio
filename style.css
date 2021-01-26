@@ -162,7 +162,7 @@ nav {
 }
 
 #caption-img {
-  width: 240px;
+  width: 330px;
 }
 
 #caption-text {
@@ -292,7 +292,7 @@ footer {
     font-size: 16px;
   }
   #caption-img {
-    width: 200px;
+    width: 250px;
   }
 }
 
@@ -330,7 +330,7 @@ footer {
   .nav-link {
     padding: 5px;
   }
-  
+
   #skills p,
   #cert-text {
     font-size: 1.4rem;
