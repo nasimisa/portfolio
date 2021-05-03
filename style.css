@@ -58,6 +58,10 @@ nav {
   border: 0;
 }
 
+.nav-toggle:hover {
+  cursor: pointer;
+}
+
 .nav-toggle:focus {
   outline: 0 !important;
 }
